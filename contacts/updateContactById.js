@@ -9,7 +9,8 @@ const updateContactById = async (id, data) => {
   }
   contacts[idx] = data;
   await updateСontacts(contacts);
-  return contacts[id];
+  return contacts[idx];
+  // return contacts[id];
 };
 
 module.exports = updateContactById;

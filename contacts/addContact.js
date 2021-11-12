@@ -3,7 +3,7 @@ const { v4 } = require("uuid");
 const updateСontacts = require("./updateСontacts");
 const listContacts = require("./listContacts");
 
-const add = async (data) => {
+const addContact = async (data) => {
   const newСontact = { ...data, id: v4() };
   const contacts = await listContacts();
   contacts.push(newСontact);
@@ -11,4 +11,4 @@ const add = async (data) => {
   return newСontact;
 };
 
-module.exports = add;
+module.exports = addContact;
